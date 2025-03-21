@@ -452,7 +452,7 @@ export default function Home() {
               variants={staggerChildren}
               initial="initial"
               animate="animate"
-              className="grid md:grid-cols-2 gap-12 mb-20"
+              className="grid md:grid-cols-2 gap-12 mb-6"
             >
               <motion.div 
                 variants={fadeInUp}
@@ -593,7 +593,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-3xl font-serif text-slate-800 mb-6 px-8 py-4"
+                    className="text-3xl font-serif text-slate-800  px-4 py-4"
                   >
                     Athma Prayag & Arya Rajan
                   </motion.h2>
@@ -602,7 +602,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-lg text-slate-600 mb-4 italic"
+                  className="text-lg text-slate-600 mb-4 italic mt-8"
                 >
                   With immense joy and love, Mr. Anil Kumar & Mrs. Geetha Anil invite you to the wedding celebration of their beloved son
                 </motion.p>
@@ -622,7 +622,7 @@ export default function Home() {
               variants={staggerChildren}
               initial="initial"
               animate="animate"
-              className="text-center mb-20"
+              className="text-center mb-4"
             >
               <motion.div 
                 variants={fadeInUp}
@@ -719,22 +719,7 @@ export default function Home() {
                 >
                   <div className="absolute top-1 right-1 w-2 h-2 border-t border-r border-slate-400 -rotate-45"></div>
                 </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                  className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-slate-300"
-                >
-                  <div className="absolute bottom-1 left-1 w-2 h-2 border-b border-l border-slate-400 rotate-45"></div>
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                  className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-slate-300"
-                >
-                  <div className="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-slate-400 -rotate-45"></div>
-                </motion.div>
+               
                 <motion.div 
                   whileHover={{ scale: 1.02 }}
                   className="relative h-[300px] rounded-lg overflow-hidden shadow-md mb-4 hover:shadow-lg transition-shadow duration-300"
@@ -751,13 +736,14 @@ export default function Home() {
                   ></iframe>
                 </motion.div>
                 <motion.a 
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   href="https://www.google.com/maps/place/Anil+MK+home/@11.4839858,75.6247822,18z/data=!4m9!1m2!2m1!1sPlaur+template+thikkodi!3m5!1s0x3ba6899686380cff:0x56e473c4785fbd8f!8m2!3d11.4839858!4d75.6261368!16s%2Fg%2F11shc5v674?entry=ttu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-slate-600 hover:text-slate-800 transition-colors"
+                  className="w-full flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white py-4 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg font-medium"
                 >
-                  <FaMapMarkerAlt className="mr-2" />
+                  <FaMapMarkerAlt className="text-xl" />
                   View on Google Maps
                 </motion.a>
               </motion.div>
