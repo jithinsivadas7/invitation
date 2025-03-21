@@ -132,7 +132,7 @@ export default function AltPage() {
                   className="min-h-screen"
                 >
                   {/* Couple Section with Modern Layout */}
-                  <section id="couple" className="md:py-20 sm:py-10 bg-white/50 backdrop-blur-sm">
+                  <section id="couple" className="py-10 sm:py-12 md:py-20 bg-white/50 backdrop-blur-sm">
                     <div className="container mx-auto px-4 max-w-7xl">
                       <motion.div 
                         variants={staggerChildren}
@@ -146,7 +146,7 @@ export default function AltPage() {
                   </section>
 
                   {/* Details Section with Elegant Design */}
-                  <section id="details" className="md:py-20 sm:py-12 bg-gradient-to-b from-white to-slate-50">
+                  <section id="details" className="py-10 sm:py-12 md:py-20 bg-gradient-to-b from-white to-slate-50">
                     <div className="container mx-auto px-4 max-w-7xl">
                       <motion.div 
                         variants={staggerChildren}
