@@ -18,6 +18,15 @@ export const Balloon = ({
   opacity = 0.2,
   shape = 'round'
 }: BalloonProps) => {
+    // Convert opacity (0-1) to Tailwind opacity class (0-100)
+    const opacityClass = `opacity-${Math.round(opacity * 100)}`;
+  
+    // Extract color name and properly handle both formats
+    const colorName = color.startsWith('bg-') ? color.split('-')[1] : color;
+    const bgColorClass = color.startsWith('bg-') ? color : `bg-${color}`;
+    
+    // For SVG fill, we need to convert bg-red-500 to text-red-500 (for path fill)
+    const fillColorClass = bgColorClass.replace('bg-', 'text-');
   return (
     <motion.div
       animate={animation === 'balloon' ? balloonAnimation : floatAnimation}
@@ -25,42 +34,50 @@ export const Balloon = ({
     >
       <div className="absolute inset-0">
         {shape === 'heart' ? (
-          // Heart shape with smoother edges
           <div className="relative w-full h-full">
-            {/* Left half of heart */}
+            {/* Left circle */}
             <div 
-              className={`absolute w-[45%] h-[70%] ${color}`}
-              style={{ 
-                left: '5%', 
-                transform: 'rotate(-45deg)',
-                borderRadius: '50% 50% 0 50%'
-              }}
+              className={`absolute left-0 top-[20%] w-[50%] h-[50%] ${color} rounded-full`}
             />
-            {/* Right half of heart */}
+            {/* Right circle */}
             <div 
-              className={`absolute w-[45%] h-[70%] ${color}`}
-              style={{ 
-                right: '5%', 
-                transform: 'rotate(45deg)',
-                borderRadius: '50% 50% 50% 0'
-              }}
+              className={`absolute right-0 top-[20%] w-[50%] h-[50%] ${color} rounded-full`}
             />
-            {/* Bottom point of heart */}
+            {/* Bottom point */}
             <div 
-              className={`absolute w-[50%] h-[50%] ${color}`}
-              style={{ 
-                bottom: '15%', 
-                left: '25%',
-                transform: 'rotate(45deg)',
-                borderRadius: '5px 10px 10px 0'
+              className={`absolute top-[45%] left-[25%] w-[50%] h-[50%] ${color}`}
+              style={{
+                transform: 'rotate(45deg)'
               }}
             />
           </div>
         ) : (
           // Round balloon shape
           <>
-            <div className={`absolute inset-0 ${color} rounded-full transform scale-100`} />
-            <div className={`absolute bottom-[10%] left-1/2 w-[40%] h-[40%] ${color} rounded-full transform -translate-x-1/2 scale-90 opacity-80`} />
+
+        <div className="relative w-full h-full">
+          {/* Main balloon body */}
+          <div className={`absolute inset-0 ${bgColorClass} rounded-full`}></div>
+          
+          {/* Balloon highlight */}
+          <div className={`absolute w-1/3 h-1/3 bg-white rounded-full opacity-30`} 
+               style={{ top: '20%', left: '20%' }}></div>
+          
+          {/* Balloon knot */}
+          <div className={`absolute w-1/6 h-1/6 ${bgColorClass} rounded-full`}
+               style={{ bottom: '-5%', left: '42%' }}></div>
+          
+          {/* String */}
+          <div 
+            className="absolute w-px h-10 transform"
+            style={{
+              bottom: '-15%',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              background: `linear-gradient(to bottom, var(--${colorName}-500, currentColor), transparent)`
+            }}
+          />
+        </div>
           </>
         )}
         {/* String */}
