@@ -55,17 +55,34 @@ export default function Home() {
                   color="bg-red-400"
                   size="w-16 h-16"
                   position="-top-8 -left-4"
+                  shape="heart"
                 />
                 <Balloon
                   color="bg-pink-400"
                   size="w-20 h-20"
                   position="top-1/2 -right-8"
                   animation="float"
+                  shape="round"
                 />
                 <Balloon
                   color="bg-purple-400"
                   size="w-16 h-16"
                   position="bottom-0 left-1/4"
+                  shape="heart"
+                />
+                <Balloon
+                  color="bg-red-300"
+                  size="w-12 h-12"
+                  position="top-1/4 right-1/4"
+                  shape="round"
+                  opacity={0.15}
+                />
+                <Balloon
+                  color="bg-pink-300"
+                  size="w-14 h-14"
+                  position="bottom-1/4 right-1/3"
+                  shape="heart"
+                  opacity={0.15}
                 />
               </div>
 
