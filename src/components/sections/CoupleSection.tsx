@@ -48,7 +48,7 @@ export const CoupleSection = () => {
           
           <motion.h2 
             variants={fadeInUp}
-            className="text-3xl md:text-4xl font-serif text-slate-800 mb-2 px-6 py-4 bg-gradient-to-r from-rose-600 to-fuchsia-600 bg-clip-text text-transparent"
+            className="text-center text-3xl md:text-4xl font-serif text-slate-800 mb-2 px-6 py-4 bg-gradient-to-r from-rose-600 to-fuchsia-600 bg-clip-text text-transparent"
           >
             Athma Prayag & Arya Rajan
           </motion.h2>
@@ -59,8 +59,9 @@ export const CoupleSection = () => {
           className="space-y-4"
         >
           <p className="text-lg text-slate-700">
-            With immense joy and love, Mr. Anil Kumar & Mrs. Geetha Anil invite you to the reception celebration of their beloved son
+            With immense joy and love, <strong>Mr. Anil Kumar & Mrs. Geetha Anil</strong> invite you to the reception celebration of their beloved son
           </p>
+      
           <p className="text-lg text-slate-700 italic">
             Request the pleasure of your company at the reception celebration
           </p>
