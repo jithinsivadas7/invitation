@@ -10,6 +10,7 @@ import { CornerDecoration } from '@/components/ui/CornerDecoration';
 import { Balloon } from '@/components/ui/Balloon';
 import { STRUCTURED_DATA, IMAGES } from '@/constants/wedding';
 import { staggerChildren } from '@/animations';
+import Link from 'next/link';
 
 export default function AltPage() {
   const [showContent, setShowContent] = useState(false);
@@ -175,7 +176,7 @@ export default function AltPage() {
                 className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50"
               >
                 <div className="bg-white/80 backdrop-blur-md rounded-full shadow-lg px-6 py-3 flex gap-6">
-                  <a href="/" className="text-slate-600 hover:text-slate-900 transition-colors">Classic View</a>
+                  <Link href="/" className="text-slate-600 hover:text-slate-900 transition-colors">Classic View</Link>
                 </div>
               </motion.nav>
             )}
