@@ -42,8 +42,6 @@ Open [http://localhost:3000](http://localhost:3000)
 - React Icons
 - TypeScript
 
-## License
-MIT License
 
 ---
 Created with ❤️ for Athma Prayag & Arya Rajan's wedding celebration

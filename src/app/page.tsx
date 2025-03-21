@@ -20,7 +20,7 @@ export default function Home() {
     }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(timer);
-  }, []);
+  }, [images.length]);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -75,24 +75,6 @@ export default function Home() {
     y: [0, -30, 0],
     transition: {
       duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }
-  };
-
-  const rotateAnimation = {
-    rotate: [0, 360],
-    transition: {
-      duration: 20,
-      repeat: Infinity,
-      ease: "linear"
-    }
-  };
-
-  const scaleAnimation = {
-    scale: [1, 1.2, 1],
-    transition: {
-      duration: 3,
       repeat: Infinity,
       ease: "easeInOut"
     }
