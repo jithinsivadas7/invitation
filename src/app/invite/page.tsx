@@ -10,16 +10,16 @@ import { STRUCTURED_DATA, IMAGES } from '@/constants/wedding';
 import { staggerChildren } from '@/animations';
 import Link from 'next/link';
 
+const updatedData = {
+  ...STRUCTURED_DATA,
+  image: IMAGES[0].src,
+};
+
 export default function AltPage() {
   const [showContent, setShowContent] = useState(false);
 
   const handleViewDetails = () => {
     setShowContent(true);
-  };
-
-  const updatedData = {
-    ...STRUCTURED_DATA,
-    image: IMAGES[1].src, 
   };
 
   return (

@@ -1,17 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Montserrat } from "next/font/google";
-import "./globals.css";
 import { IMAGES } from '@/constants/wedding';
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-});
 
 export const metadata: Metadata = {
   title: "Athma Prayag & Arya Rajan - Wedding Invitation",
@@ -28,13 +16,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-wedding-domain.com",
+    url: "https://your-wedding-domain.com/invite",
     siteName: "Athma Prayag & Arya Rajan Wedding",
     title: "Athma Prayag & Arya Rajan - Wedding Invitation",
     description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
     images: [
       {
-        url: IMAGES[2].src,
+        url: IMAGES[1].src,
         width: 1200,
         height: 630,
         alt: "Athma Prayag & Arya Rajan Wedding Invitation",
@@ -45,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Athma Prayag & Arya Rajan - Wedding Invitation",
     description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
-    images: [IMAGES[2].src],
+    images: [IMAGES[1].src],
     creator: "@yourtwitterhandle",
   },
   robots: {
@@ -63,25 +51,14 @@ export const metadata: Metadata = {
     google: "your-google-site-verification",
   },
   alternates: {
-    canonical: "https://your-wedding-domain.com",
+    canonical: "https://your-wedding-domain.com/invite",
   },
 };
 
-export default function RootLayout({
+export default function InviteLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-      </head>
-      <body className={`${playfair.variable} ${montserrat.variable} font-montserrat`}>
-        {children}
-      </body>
-    </html>
-  );
-}
+  return children;
+} 
