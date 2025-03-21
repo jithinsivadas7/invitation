@@ -1,11 +1,12 @@
 'use client';
 
 import Script from "next/script";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { useState, useEffect } from "react";
 import { CoupleSection } from '@/components/sections/CoupleSection';
 import { DetailsSection } from '@/components/sections/DetailsSection';
 import { Balloon } from '@/components/ui/Balloon';
+import { Envelope } from '@/components/ui/Envelope';
 import { STRUCTURED_DATA, IMAGES } from '@/constants/wedding';
 import { staggerChildren } from '@/animations';
 import Link from 'next/link';
@@ -17,10 +18,29 @@ const updatedData = {
 
 export default function AltPage() {
   const [showContent, setShowContent] = useState(false);
+  const { scrollY } = useScroll();
+  
+  // Parallax effects with reduced sensitivity
+  const heroY = useTransform(scrollY, [0, 200], [0, -100]);
+  const contentY = useTransform(scrollY, [0, 200], [0, -50]);
+  const opacity = useTransform(scrollY, [0, 150], [1, 0]);
+  const scale = useTransform(scrollY, [0, 150], [1, 0.9]);
 
-  const handleViewDetails = () => {
+  const handleOpenEnvelope = () => {
     setShowContent(true);
   };
+
+  // Handle scroll to show content
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30 && !showContent) {
+        setShowContent(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [showContent]);
 
   return (
     <>
@@ -39,11 +59,12 @@ export default function AltPage() {
 
           {/* Main Content */}
           <div className="relative">
-            {/* Hero Section with Parallax Effect */}
+            {/* Hero Section with Button */}
             <AnimatePresence>
               {!showContent && (
                 <motion.section 
-                  initial={{ opacity: 1 }}
+                  style={{ opacity, y: heroY, scale }}
+                  initial={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -50 }}
                   transition={{ duration: 0.8 }}
                   className="relative h-screen flex items-center justify-center overflow-hidden"
@@ -107,14 +128,7 @@ export default function AltPage() {
                       transition={{ duration: 0.8, delay: 0.6 }}
                       className="flex justify-center"
                     >
-                      <motion.button 
-                        onClick={handleViewDetails}
-                        className="px-8 py-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-full hover:from-rose-600 hover:to-pink-600 transition-all text-lg font-medium shadow-lg hover:shadow-xl"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        View Details
-                      </motion.button>
+                      <Envelope onOpen={handleOpenEnvelope} />
                     </motion.div>
                   </div>
                 </motion.section>
@@ -125,9 +139,10 @@ export default function AltPage() {
             <AnimatePresence>
               {showContent && (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  style={{ y: contentY }}
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 100 }}
                   transition={{ duration: 0.8 }}
                   className="min-h-screen"
                 >
