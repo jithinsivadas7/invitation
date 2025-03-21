@@ -3,10 +3,8 @@
 import Script from "next/script";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { HeroSection } from '@/components/sections/HeroSection';
 import { CoupleSection } from '@/components/sections/CoupleSection';
 import { DetailsSection } from '@/components/sections/DetailsSection';
-import { CornerDecoration } from '@/components/ui/CornerDecoration';
 import { Balloon } from '@/components/ui/Balloon';
 import { STRUCTURED_DATA, IMAGES } from '@/constants/wedding';
 import { staggerChildren } from '@/animations';
