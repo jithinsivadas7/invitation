@@ -14,9 +14,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Athma Prayag & Arya Rajan - Wedding Reception Invitation",
-  description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
-  keywords: "wedding, invitation, celebration, Athma Prayag, Arya Rajan, wedding ceremony, Muthirakkalil, Thikkodi, Kerala",
+  title: "Athma Prayag & Arya Rajan - Wedding Reception",
+  description: "Join us in celebrating the wedding reception of Athma Prayag & Arya Rajan. We request the pleasure of your company at our celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
+  keywords: "wedding, reception, celebration, Athma Prayag, Arya Rajan, wedding ceremony, Muthirakkalil, Thikkodi, Kerala",
   authors: [{ name: "Athma Prayag & Arya Rajan" }],
   creator: "Athma Prayag & Arya Rajan",
   publisher: "Athma Prayag & Arya Rajan",
@@ -29,23 +29,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://your-wedding-domain.com",
-    siteName: "Athma Prayag & Arya Rajan Wedding",
-    title: "Athma Prayag & Arya Rajan - Wedding Reception Invitation",
-    description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
+    siteName: "Athma Prayag & Arya Rajan Wedding Reception",
+    title: "Athma Prayag & Arya Rajan - Wedding Reception",
+    description: "Join us in celebrating the wedding reception of Athma Prayag & Arya Rajan. We request the pleasure of your company at our celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
     images: [
       {
-        url: IMAGES[2].src,
+        url: IMAGES[0].src,
         width: 1200,
         height: 630,
-        alt: "Athma Prayag & Arya Rajan Wedding Reception Invitation",
+        alt: "Athma Prayag & Arya Rajan Wedding Reception - Groom",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Athma Prayag & Arya Rajan - Wedding Reception Invitation",
-    description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
-    images: [IMAGES[2].src],
+    title: "Athma Prayag & Arya Rajan - Wedding Reception",
+    description: "Join us in celebrating the wedding reception of Athma Prayag & Arya Rajan. We request the pleasure of your company at our celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
+    images: [IMAGES[0].src],
     creator: "@yourtwitterhandle",
   },
   robots: {
