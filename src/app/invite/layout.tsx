@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { IMAGES } from '@/constants/wedding';
 
 export const metadata: Metadata = {
-  title: "Athma Prayag & Arya Rajan - Wedding Invitation",
+  title: "Athma Prayag & Arya Rajan - Wedding Reception Invitation",
   description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
   keywords: "wedding, invitation, celebration, Athma Prayag, Arya Rajan, wedding ceremony, Muthirakkalil, Thikkodi, Kerala",
   authors: [{ name: "Athma Prayag & Arya Rajan" }],
@@ -18,22 +18,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://your-wedding-domain.com/invite",
     siteName: "Athma Prayag & Arya Rajan Wedding",
-    title: "Athma Prayag & Arya Rajan - Wedding Invitation",
+    title: "Athma Prayag & Arya Rajan - Wedding Reception Invitation",
     description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
     images: [
       {
-        url: IMAGES[1].src,
+        url: IMAGES[0].src,
         width: 1200,
         height: 630,
-        alt: "Athma Prayag & Arya Rajan Wedding Invitation",
+        alt: "Athma Prayag & Arya Rajan Wedding Reception Invitation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Athma Prayag & Arya Rajan - Wedding Invitation",
+    title: "Athma Prayag & Arya Rajan - Wedding Reception Invitation",
     description: "Join us in celebrating the wedding of Athma Prayag & Arya Rajan. We request the pleasure of your company at our wedding celebration on May 1st, 2025 at Muthirakkalil, Thikkodi.",
-    images: [IMAGES[1].src],
+    images: [IMAGES[0].src],
     creator: "@yourtwitterhandle",
   },
   robots: {

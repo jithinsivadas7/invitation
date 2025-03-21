@@ -30,7 +30,7 @@ export default function AltPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(updatedData) }}
       />
       <AnimatePresence>
-        <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-pink-50 relative overflow-hidden">
+        <main className="min-h-screen bg-gradient-to-br from-rose-100 via-orange-50 to-amber-100 relative overflow-hidden">
           {/* Decorative Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.8),transparent)]" />
@@ -91,7 +91,7 @@ export default function AltPage() {
                       transition={{ duration: 0.8, delay: 0.2 }}
                       className="text-4xl md:text-6xl font-serif text-slate-800 mb-6"
                     >
-                      Wedding Invitation
+                      Wedding Reception Invitation
                     </motion.h1>
                     <motion.p 
                       initial={{ opacity: 0, y: 20 }}
@@ -109,7 +109,7 @@ export default function AltPage() {
                     >
                       <motion.button 
                         onClick={handleViewDetails}
-                        className="px-8 py-3 bg-slate-800 text-white rounded-full hover:bg-slate-700 transition-colors text-lg font-medium shadow-lg hover:shadow-xl"
+                        className="px-8 py-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-full hover:from-rose-600 hover:to-pink-600 transition-all text-lg font-medium shadow-lg hover:shadow-xl"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -146,7 +146,7 @@ export default function AltPage() {
                   </section>
 
                   {/* Details Section with Elegant Design */}
-                  <section id="details" className="py-10 sm:py-12 md:py-20 bg-gradient-to-b from-white to-slate-50">
+                  <section id="details" className="py-10 sm:py-12 md:py-20 bg-gradient-to-b from-white to-rose-50">
                     <div className="container mx-auto px-4 max-w-7xl">
                       <motion.div 
                         variants={staggerChildren}

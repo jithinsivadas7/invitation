@@ -9,21 +9,21 @@ export const DetailsSection = () => {
       {/* Event Details Card */}
       <motion.div 
         variants={fadeInUp}
-        className="bg-white p-6 rounded-lg shadow-md relative hover:shadow-lg transition-shadow duration-300 mb-12"
+        className="bg-white p-6 rounded-lg shadow-md relative hover:shadow-lg transition-shadow duration-300 mb-12 border border-pink-100"
       >
-        <CornerDecoration position="top-left" />
-        <CornerDecoration position="top-right" />
-        <CornerDecoration position="bottom-left" />
-        <CornerDecoration position="bottom-right" />
+        <CornerDecoration position="top-left" color="pink" />
+        <CornerDecoration position="top-right" color="purple" />
+        <CornerDecoration position="bottom-left" color="rose" />
+        <CornerDecoration position="bottom-right" color="fuchsia" />
         
         <div className="grid md:grid-cols-3 gap-6 text-slate-700">
           <motion.div 
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 border border-slate-100"
+            className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-pink-50 to-purple-50 border border-pink-100"
           >
-            <div className="bg-slate-100 p-3 rounded-full">
-              <FaCalendarAlt className="text-2xl text-slate-600" />
+            <div className="bg-gradient-to-br from-pink-100 to-purple-100 p-3 rounded-full">
+              <FaCalendarAlt className="text-2xl text-pink-600" />
             </div>
             <div>
               <h4 className="font-medium text-slate-900">Thursday</h4>
@@ -34,10 +34,10 @@ export const DetailsSection = () => {
           <motion.div 
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 border border-slate-100"
+            className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-purple-50 to-rose-50 border border-purple-100"
           >
-            <div className="bg-slate-100 p-3 rounded-full">
-              <FaClock className="text-2xl text-slate-600" />
+            <div className="bg-gradient-to-br from-purple-100 to-rose-100 p-3 rounded-full">
+              <FaClock className="text-2xl text-purple-600" />
             </div>
             <div>
               <h4 className="font-medium text-slate-900">3:00 PM</h4>
@@ -48,10 +48,10 @@ export const DetailsSection = () => {
           <motion.div 
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-3 p-4 rounded-lg bg-slate-50 border border-slate-100"
+            className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-rose-50 to-fuchsia-50 border border-rose-100"
           >
-            <div className="bg-slate-100 p-3 rounded-full">
-              <FaMapMarkerAlt className="text-2xl text-slate-600" />
+            <div className="bg-gradient-to-br from-rose-100 to-fuchsia-100 p-3 rounded-full">
+              <FaMapMarkerAlt className="text-2xl text-rose-600" />
             </div>
             <div>
               <h4 className="font-medium text-slate-900">Muthirakkalil</h4>
@@ -64,12 +64,12 @@ export const DetailsSection = () => {
       {/* Map Card */}
       <motion.div 
         variants={fadeInUp}
-        className="bg-white p-8 rounded-lg shadow-md relative hover:shadow-lg transition-shadow duration-300"
+        className="bg-white p-8 rounded-lg shadow-md relative hover:shadow-lg transition-shadow duration-300 border border-purple-100"
       >
-        <CornerDecoration position="top-left" />
-        <CornerDecoration position="top-right" />
-        <CornerDecoration position="bottom-left" />
-        <CornerDecoration position="bottom-right" />
+        <CornerDecoration position="top-left" color="purple" />
+        <CornerDecoration position="top-right" color="rose" />
+        <CornerDecoration position="bottom-left" color="fuchsia" />
+        <CornerDecoration position="bottom-right" color="pink" />
         
         <motion.div 
           whileHover={{ scale: 1.02 }}
@@ -93,7 +93,7 @@ export const DetailsSection = () => {
           href="https://www.google.com/maps/place/Anil+MK+home/@11.4839858,75.6247822,18z/data=!4m9!1m2!2m1!1sPlaur+template+thikkodi!3m5!1s0x3ba6899686380cff:0x56e473c4785fbd8f!8m2!3d11.4839858!4d75.6261368!16s%2Fg%2F11shc5v674?entry=ttu"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white py-4 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg font-medium"
+          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-4 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg font-medium"
         >
           <FaMapMarkerAlt className="text-xl" />
           View on Google Maps

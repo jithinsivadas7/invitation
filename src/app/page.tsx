@@ -19,12 +19,12 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
       />
       <AnimatePresence>
-        <main className="min-h-screen bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+        <main className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50 relative overflow-hidden">
           {/* Main Corner Decorations */}
-          <CornerDecoration position="top-left" size="lg" delay={0.5} />
-          <CornerDecoration position="top-right" size="lg" delay={0.7} />
-          <CornerDecoration position="bottom-left" size="lg" delay={0.9} />
-          <CornerDecoration position="bottom-right" size="lg" delay={1.1} />
+          <CornerDecoration position="top-left" size="lg" delay={0.5} color="pink" />
+          <CornerDecoration position="top-right" size="lg" delay={0.7} color="purple" />
+          <CornerDecoration position="bottom-left" size="lg" delay={0.9} color="rose" />
+          <CornerDecoration position="bottom-right" size="lg" delay={1.1} color="fuchsia" />
           
           <div className="container mx-auto px-4 py-12 relative max-w-7xl">
             {/* Hero Section */}
@@ -52,37 +52,40 @@ export default function Home() {
               {/* Decorative Balloons */}
               <div className="absolute inset-0 pointer-events-none">
                 <Balloon
-                  color="bg-red-400"
+                  color="bg-rose-400"
                   size="w-16 h-16"
                   position="-top-8 -left-4"
                   shape="heart"
+                  opacity={0.3}
                 />
                 <Balloon
-                  color="bg-pink-400"
+                  color="bg-fuchsia-400"
                   size="w-20 h-20"
                   position="top-1/2 -right-8"
                   animation="float"
                   shape="round"
+                  opacity={0.3}
                 />
                 <Balloon
                   color="bg-purple-400"
                   size="w-16 h-16"
                   position="bottom-0 left-1/4"
                   shape="heart"
+                  opacity={0.3}
                 />
                 <Balloon
-                  color="bg-red-300"
+                  color="bg-pink-400"
                   size="w-12 h-12"
                   position="top-1/4 right-1/4"
                   shape="round"
-                  opacity={0.15}
+                  opacity={0.2}
                 />
                 <Balloon
-                  color="bg-pink-300"
+                  color="bg-rose-300"
                   size="w-14 h-14"
                   position="bottom-1/4 right-1/3"
                   shape="heart"
-                  opacity={0.15}
+                  opacity={0.2}
                 />
               </div>
 

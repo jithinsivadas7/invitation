@@ -32,9 +32,9 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-5xl font-serif text-slate-800 mb-4 tracking-wide px-8 py-4"
+          className="text-4xl md:text-5xl font-serif text-slate-800 mb-4 tracking-wide px-8 py-4 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"
         >
-          Wedding Invitation
+          Reception Invitation
         </motion.h1>
       </div>
       
@@ -44,7 +44,7 @@ export const HeroSection = () => {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-lg text-slate-600 font-light italic"
       >
-        Join us in celebrating our special day
+        Request the pleasure of your company at the reception celebration
       </motion.p>
     </motion.section>
   );
