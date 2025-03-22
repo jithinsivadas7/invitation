@@ -32,42 +32,42 @@ export const DetailsSection = ({ translations }: DetailsSectionProps) => {
           <motion.div 
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-pink-50 to-purple-50 border border-pink-100"
+            className="flex items-center gap-3 p-3 md:p-4 rounded-lg bg-gradient-to-br from-pink-50 to-purple-50 border border-pink-100"
           >
-            <div className="bg-gradient-to-br from-pink-100 to-purple-100 p-3 rounded-full">
-              <FaCalendarAlt className="text-2xl text-pink-600" />
+            <div className="bg-gradient-to-br from-pink-100 to-purple-100 p-2 md:p-3 rounded-full">
+              <FaCalendarAlt className="text-xl md:text-2xl text-pink-600" />
             </div>
             <div>
-              <h4 className="font-medium text-slate-900">{translations.day}</h4>
-              <p className="text-sm text-slate-600">{translations.date}</p>
+              <h4 className="font-medium text-sm md:text-base text-slate-900">{translations.day}</h4>
+              <p className="text-xs md:text-sm text-slate-600">{translations.date}</p>
             </div>
           </motion.div>
           
           <motion.div 
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-purple-50 to-rose-50 border border-purple-100"
+            className="flex items-center gap-3 p-3 md:p-4 rounded-lg bg-gradient-to-br from-purple-50 to-rose-50 border border-purple-100"
           >
-            <div className="bg-gradient-to-br from-purple-100 to-rose-100 p-3 rounded-full">
-              <FaClock className="text-2xl text-purple-600" />
+            <div className="bg-gradient-to-br from-purple-100 to-rose-100 p-2 md:p-3 rounded-full">
+              <FaClock className="text-xl md:text-2xl text-purple-600" />
             </div>
             <div>
-              <h4 className="font-medium text-slate-900">{translations.time}</h4>
-              <p className="text-sm text-slate-600">{translations.timePrefix}</p>
+              <h4 className="font-medium text-sm md:text-base text-slate-900">{translations.time}</h4>
+              <p className="text-xs md:text-sm text-slate-600">{translations.timePrefix}</p>
             </div>
           </motion.div>
           
           <motion.div 
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-br from-rose-50 to-fuchsia-50 border border-rose-100"
+            className="flex items-center gap-3 p-3 md:p-4 rounded-lg bg-gradient-to-br from-rose-50 to-fuchsia-50 border border-rose-100"
           >
-            <div className="bg-gradient-to-br from-rose-100 to-fuchsia-100 p-3 rounded-full">
-              <FaMapMarkerAlt className="text-2xl text-rose-600" />
+            <div className="bg-gradient-to-br from-rose-100 to-fuchsia-100 p-2 md:p-3 rounded-full">
+              <FaMapMarkerAlt className="text-xl md:text-2xl text-rose-600" />
             </div>
             <div>
-              <h4 className="font-medium text-slate-900">{translations.venue}</h4>
-              <p className="text-sm text-slate-600">{translations.location}</p>
+              <h4 className="font-medium text-sm md:text-base text-slate-900">{translations.venue}</h4>
+              <p className="text-xs md:text-sm text-slate-600">{translations.location}</p>
             </div>
           </motion.div>
         </div>
@@ -105,9 +105,9 @@ export const DetailsSection = ({ translations }: DetailsSectionProps) => {
           href="https://www.google.com/maps/place/Anil+MK+home/@11.4839858,75.6247822,18z/data=!4m9!1m2!2m1!1sPlaur+template+thikkodi!3m5!1s0x3ba6899686380cff:0x56e473c4785fbd8f!8m2!3d11.4839858!4d75.6261368!16s%2Fg%2F11shc5v674?entry=ttu"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-4 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg font-medium"
+          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-3 md:py-4 px-4 md:px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-sm md:text-lg font-medium mt-6"
         >
-          <FaMapMarkerAlt className="text-xl" />
+          <FaMapMarkerAlt className="text-lg md:text-xl" />
           {translations.viewMap}
         </motion.a>
       </motion.div>

@@ -58,7 +58,7 @@ export const CoupleSection = ({ translations }: CoupleSectionProps) => {
           
           <motion.h2 
             variants={fadeInUp}
-            className="text-center text-3xl md:text-4xl font-serif text-slate-800 mb-2 px-6 py-4 bg-gradient-to-r from-rose-600 to-fuchsia-600 bg-clip-text text-transparent"
+            className="text-2xl md:text-4xl font-serif text-slate-800 mb-2 px-4 py-3 bg-gradient-to-r from-rose-600 to-fuchsia-600 bg-clip-text text-transparent"
           >
             {translations.names}
           </motion.h2>
@@ -66,12 +66,12 @@ export const CoupleSection = ({ translations }: CoupleSectionProps) => {
 
         <motion.div 
           variants={fadeInUp}
-          className="space-y-4"
+          className="space-y-3 md:space-y-4"
         >
-          <p className="text-lg text-slate-700 text-center">
+          <p className="text-sm md:text-lg text-slate-700">
             <strong>{translations.mainHosts}</strong> {translations.invitation}
           </p>
-          {/* <p className="text-lg text-slate-700">
+          {/* <p className="text-sm md:text-lg text-slate-700">
             <strong>{translations.coHosts}</strong>, {translations.coHostsPrefix}
           </p> */}
         </motion.div>

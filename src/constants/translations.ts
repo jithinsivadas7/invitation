@@ -55,9 +55,11 @@ export const translations: Translations = {
       date: "മെയ് 1, 2025",
       time: "ഉച്ചയ്ക്ക് 3:00",
       timePrefix: "മുതൽ",
-      venue: "മുത്തിരക്കല്ലിൽ",
+      venue: "മുതിരക്കാലിൽ", 
       location: "തിക്കോടി",
       viewMap: "ഗൂഗിൾ മാപ്പിൽ കാണുക"
     }
   }
+
+  // മുത്തിരക്കല്ലിൽ -> not kalil kaaalil
 } 
