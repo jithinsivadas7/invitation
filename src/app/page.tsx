@@ -104,14 +104,14 @@ export default function Home() {
             className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50"
           >
             <div className="bg-white/80 backdrop-blur-md rounded-full shadow-lg px-6 py-3 flex gap-6 items-center">
-              <Link 
+              {/* <Link 
                 href="/invite" 
                 className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 group"
               >
                 Invite View
                 <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <div className="w-px h-4 bg-slate-300"></div>
+              </Link> */}
+              {/* <div className="w-px h-4 bg-slate-300"></div> */}
               <Link 
                 href="/malayalam" 
                 className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 group"
