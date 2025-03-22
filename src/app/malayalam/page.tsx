@@ -8,18 +8,25 @@ import { DetailsSection } from '@/components/sections/DetailsSection';
 import { CornerDecoration } from '@/components/ui/CornerDecoration';
 import { Balloon } from '@/components/ui/Balloon';
 import { STRUCTURED_DATA } from '@/constants/wedding';
-import { staggerChildren } from '@/animations';
 import { translations } from '@/constants/translations';
+import { staggerChildren } from '@/animations';
 import Link from 'next/link';
 import { HiArrowRight } from 'react-icons/hi';
 
-export default function Home() {
+export default function MalayalamPage() {
   return (
     <>
       <Script
         id="structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          ...STRUCTURED_DATA,
+          name: translations.ml.meta.title,
+          description: translations.ml.meta.description,
+          inLanguage: "ml",
+          alternateName: translations.en.meta.title,
+          image: translations.ml.meta.image,
+        }) }}
       />
       <AnimatePresence>
         <main className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50 relative overflow-hidden">
@@ -32,7 +39,7 @@ export default function Home() {
           <div className="container mx-auto px-4 py-12 relative max-w-7xl">
             {/* Hero Section */}
             <div className="mb-10">
-              <HeroSection translations={translations.en.hero} />
+              <HeroSection translations={translations.ml.hero} />
             </div>
 
             {/* Couple Section */}
@@ -42,7 +49,7 @@ export default function Home() {
               animate="animate"
               className="mb-12"
             >
-              <CoupleSection translations={translations.en.couple} />
+              <CoupleSection translations={translations.ml.couple} />
             </motion.section>
 
             {/* Details Section */}
@@ -92,7 +99,7 @@ export default function Home() {
                 />
               </div>
 
-              <DetailsSection translations={translations.en.details} />
+              <DetailsSection translations={translations.ml.details} />
             </motion.section>
           </div>
 
@@ -103,27 +110,19 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50"
           >
-            <div className="bg-white/80 backdrop-blur-md rounded-full shadow-lg px-6 py-3 flex gap-6 items-center">
-              <Link 
-                href="/invite" 
+            <div className="bg-white/80 backdrop-blur-md rounded-full shadow-lg px-6 py-3 flex gap-6">
+            <Link 
+                href="/" 
                 className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 group"
               >
-                Invite View
+                English
                 <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <div className="w-px h-4 bg-slate-300"></div>
-              <Link 
-                href="/malayalam" 
-                className="text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-2 group"
-              >
-                മലയാളം
-                <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              {/* <Link href="/invite" className="text-slate-600 hover:text-slate-900 transition-colors">Invite View</Link> */}
             </div>
           </motion.nav>
         </main>
       </AnimatePresence>
     </>
   );
-}
-
+} 

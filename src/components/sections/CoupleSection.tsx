@@ -3,7 +3,17 @@ import { CornerDecoration } from '@/components/ui/CornerDecoration';
 import { useImageSlider } from '@/hooks/useImageSlider';
 import { fadeInUp } from '@/animations';
 
-export const CoupleSection = () => {
+interface CoupleSectionProps {
+  translations: {
+    names: string;
+    mainHosts: string;
+    coHosts: string;
+    invitation: string;
+    coHostsPrefix: string;
+  }
+}
+
+export const CoupleSection = ({ translations }: CoupleSectionProps) => {
   const { currentImage, currentImageIndex } = useImageSlider();
 
   return (
@@ -50,7 +60,7 @@ export const CoupleSection = () => {
             variants={fadeInUp}
             className="text-center text-3xl md:text-4xl font-serif text-slate-800 mb-2 px-6 py-4 bg-gradient-to-r from-rose-600 to-fuchsia-600 bg-clip-text text-transparent"
           >
-            Athma Prayag & Arya Rajan
+            {translations.names}
           </motion.h2>
         </div>
 
@@ -59,12 +69,11 @@ export const CoupleSection = () => {
           className="space-y-4"
         >
           <p className="text-lg text-slate-700">
-            With immense joy and love, <strong>Mr. Anil Kumar & Mrs. Geetha Anil</strong> invite you to the reception celebration of their beloved son
+            <strong>{translations.mainHosts}</strong> {translations.invitation}
           </p>
-      
-          <p className="text-lg text-slate-700 italic">
-            Request the pleasure of your company at the reception celebration
-          </p>
+          {/* <p className="text-lg text-slate-700">
+            <strong>{translations.coHosts}</strong>, {translations.coHostsPrefix}
+          </p> */}
         </motion.div>
       </motion.div>
     </div>

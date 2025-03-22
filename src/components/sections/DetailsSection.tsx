@@ -3,7 +3,19 @@ import { FaMapMarkerAlt, FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { CornerDecoration } from '@/components/ui/CornerDecoration';
 import { fadeInUp } from '@/animations';
 
-export const DetailsSection = () => {
+interface DetailsSectionProps {
+  translations: {
+    day: string;
+    date: string;
+    time: string;
+    timePrefix: string;
+    venue: string;
+    location: string;
+    viewMap: string;
+  }
+}
+
+export const DetailsSection = ({ translations }: DetailsSectionProps) => {
   return (
     <div className="max-w-4xl mx-auto">
       {/* Event Details Card */}
@@ -26,8 +38,8 @@ export const DetailsSection = () => {
               <FaCalendarAlt className="text-2xl text-pink-600" />
             </div>
             <div>
-              <h4 className="font-medium text-slate-900">Thursday</h4>
-              <p className="text-sm text-slate-600">May 1, 2025</p>
+              <h4 className="font-medium text-slate-900">{translations.day}</h4>
+              <p className="text-sm text-slate-600">{translations.date}</p>
             </div>
           </motion.div>
           
@@ -40,8 +52,8 @@ export const DetailsSection = () => {
               <FaClock className="text-2xl text-purple-600" />
             </div>
             <div>
-              <h4 className="font-medium text-slate-900">3:00 PM</h4>
-              <p className="text-sm text-slate-600">onwards</p>
+              <h4 className="font-medium text-slate-900">{translations.time}</h4>
+              <p className="text-sm text-slate-600">{translations.timePrefix}</p>
             </div>
           </motion.div>
           
@@ -54,8 +66,8 @@ export const DetailsSection = () => {
               <FaMapMarkerAlt className="text-2xl text-rose-600" />
             </div>
             <div>
-              <h4 className="font-medium text-slate-900">Muthirakkalil</h4>
-              <p className="text-sm text-slate-600">Thikkodi</p>
+              <h4 className="font-medium text-slate-900">{translations.venue}</h4>
+              <p className="text-sm text-slate-600">{translations.location}</p>
             </div>
           </motion.div>
         </div>
@@ -96,7 +108,7 @@ export const DetailsSection = () => {
           className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-4 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-lg font-medium"
         >
           <FaMapMarkerAlt className="text-xl" />
-          View on Google Maps
+          {translations.viewMap}
         </motion.a>
       </motion.div>
     </div>

@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion';
 import { CornerDecoration } from '@/components/ui/CornerDecoration';
 import { Balloon } from '@/components/ui/Balloon';
+import { HeroTranslations } from '@/types/translations';
 
-export const HeroSection = () => {
+interface HeroSectionProps {
+  translations: HeroTranslations;
+}
+
+export function HeroSection({ translations }: HeroSectionProps) {
   return (
     <motion.section 
       initial={{ opacity: 0, y: 20 }}
@@ -34,7 +39,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-5xl font-serif text-slate-800 mb-4 tracking-wide px-8 py-4 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"
         >
-          Wedding Reception Invitation
+          {translations.title}
         </motion.h1>
       </div>
       
@@ -42,10 +47,10 @@ export const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-lg text-slate-600 font-light italic"
+        className="text-lg text-slate-600 font-light"
       >
-        Request the pleasure of your company at the reception celebration
+        {translations.subtitle}
       </motion.p>
     </motion.section>
   );
-}; 
+} 
