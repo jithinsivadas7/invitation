@@ -68,7 +68,7 @@ export const CoupleSection = ({ translations }: CoupleSectionProps) => {
           variants={fadeInUp}
           className="space-y-4"
         >
-          <p className="text-lg text-slate-700">
+          <p className="text-lg text-slate-700 text-center">
             <strong>{translations.mainHosts}</strong> {translations.invitation}
           </p>
           {/* <p className="text-lg text-slate-700">
