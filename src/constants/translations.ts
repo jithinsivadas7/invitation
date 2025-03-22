@@ -1,4 +1,5 @@
 import { Translations } from '@/types/translations';
+import { IMAGES } from '@/constants/wedding';
 
 export const translations: Translations = {
   en: {
@@ -6,7 +7,7 @@ export const translations: Translations = {
       title: "Wedding Reception - Athma Prayag & Arya Rajan",
       description: "Join us in celebrating the wedding reception of Athma Prayag and Arya Rajan. You are cordially invited to share in our joy.",
       keywords: "wedding reception, Athma Prayag, Arya Rajan, wedding celebration",
-      image: "/images/og-image-en.jpg",
+      image: IMAGES[2].src,
       imageAlt: "Athma Prayag & Arya Rajan Wedding Reception"
     },
     hero: {
@@ -35,7 +36,7 @@ export const translations: Translations = {
       title: "വിവാഹ സ്വീകരണം - ആത്മ പ്രയാഗ് & ആര്യ രാജൻ",
       description: "ആത്മ പ്രയാഗ് & ആര്യ രാജൻ എന്നിവരുടെ വിവാഹ സ്വീകരണത്തിലേക്ക് സ്വാഗതം. ഞങ്ങളുടെ സന്തോഷം പങ്കുവയ്ക്കാൻ താങ്കളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.",
       keywords: "വിവാഹ സ്വീകരണം, ആത്മ പ്രയാഗ്, ആര്യ രാജൻ, വിവാഹ ആഘോഷം",
-      image: "/images/og-image-ml.jpg",
+      image: IMAGES[2].src,
       imageAlt: "ആത്മ പ്രയാഗ് & ആര്യ രാജൻ വിവാഹ സ്വീകരണം"
     },
     hero: {
