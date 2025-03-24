@@ -25,16 +25,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## Customization
-
-1. Replace images in `public/images/`:
-   - `groom.jpg`
-   - `bride.jpeg`
-   - `couple.jpeg`
-
-2. Update wedding details in `src/app/page.tsx`
-3. Modify styles in Tailwind classes and `tailwind.config.js`
-
 ## Tech Stack
 - Next.js
 - Framer Motion
